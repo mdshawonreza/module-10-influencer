@@ -20,8 +20,10 @@ header{
  }
  nav ul{
     display: flex;
-    justify-content: space-between;
-    gap: 45px;
+    justify-content: center;
+    gap: 47px;
+    flex-wrap: wrap;
+    align-content: center;
  }
  nav li{
     list-style: none;
@@ -79,16 +81,21 @@ header{
     margin-top: 30px;
  }
  /* main section 1 styles */
- main{
+ .section-1{
     margin: 0px 170px;
  }
  .section-1-container{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    align-content: center;
     align-items: center;
+    row-gap: 30px;
+    column-gap: 30px;
+    flex-wrap: wrap;
     border: 2px solid lightgray;
     padding: 40px 30px;
     margin-top: 60px;
+    gap: 90px;
  }
  .section-1-container img{
     width: 130px;
@@ -147,13 +154,13 @@ font-size: 18px;
 font-weight: 700;
 line-height: 23px;
    }
-  
+  .hide{
+   display: none;
+  }
 
  @media screen and ( max-width:576px ) {
     nav{
         flex-direction: column;
-        margin-left: 100px;
-        margin-right: 0px;
         gap: 30px;
     }
     
@@ -161,23 +168,62 @@ line-height: 23px;
         flex-direction: column-reverse;
         margin-top: 0px;
         padding: 10px;
+        text-align: center;
     }
     .header-img{
        max-width: 600px;
-       margin: 0px;
+       margin: 2px;
        background-image: url(../images/Circle\ design.svg);
        background-size: 90%;
        background-repeat: no-repeat;
        background-position: center;
     }
+    .header-img img{
+      width: 400px;
+    }
+    .section-1{
+      margin: 30px;
+      
+    }
     .section-1-container{
-        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content:center ;
+        align-content: center;
         gap: 20px;
-        border: none;
+        padding: 50px 100px;
+        
+       
     }
     .card-container{
       grid-template-columns: repeat(1 , 1fr);
     max-width: 700px;
-    margin: auto;
+    margin:  auto auto auto 30px;
+    }
+    .section-2-container h2{
+      padding:0px 15px ; 
+    }
     
+}
+
+@media screen and (min-width:576px) and (max-width:992px) {
+   nav{
+      gap: 80px;
+  }
+  nav ul{
+   margin-top: 10px;
+   gap: 40px;
+   row-gap: 20px;
+  }
+  .header-container{
+   flex-direction: column-reverse;
+   margin-top: 40px;
+   padding: 10px;
+   gap: 70px;
+  }
+  .card-container{
+   grid-template-columns: repeat(2 , 1fr) ;
+  column-gap: 30px;
+  margin-left: 70px;
+ 
+  }
 }
